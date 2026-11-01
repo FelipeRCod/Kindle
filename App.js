@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { KindleProvider, useKindle, DESIGN_TOKENS } from './src/context/KindleContext';
+import { KindleProvider, useKindleController, DESIGN_TOKENS } from './src/controllers/KindleController';
 import Tela1 from './Tela1';
 import Tela2 from './Tela2';
 import Tela3 from './Tela3';
@@ -16,7 +16,7 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 function KindleBottomTabs() {
-  const { palette, appTheme, selectedBook } = useKindle();
+  const { palette, appTheme, selectedBook } = useKindleController();
   const isDark = appTheme === 'dark';
 
   return (
@@ -122,7 +122,7 @@ function KindleBottomTabs() {
 }
 
 function RootNavigation() {
-  const { appTheme, palette } = useKindle();
+  const { appTheme, palette } = useKindleController();
   const baseTheme = appTheme === 'dark' ? DarkTheme : DefaultTheme;
 
   const navigationTheme = {
