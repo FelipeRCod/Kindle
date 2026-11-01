@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Kindle Editorial Lyceum",
+    "slug": "kindle-editorial-lyceum",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "sdkVersion": "57.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
