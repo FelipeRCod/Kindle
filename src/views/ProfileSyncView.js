@@ -467,7 +467,7 @@ export default function ProfileSyncView({ navigation }) {
                 style={[styles.secondaryActionBtn, { borderColor: palette.primary }]}
                 onPress={() => {
                   setSelectedBookId(selectedConverterBook.id);
-                  navigation.navigate('Tela3', { bookId: selectedConverterBook.id });
+                  navigation.navigate('Tela_Leitor', { bookId: selectedConverterBook.id });
                 }}
               >
                 <Ionicons name="book-outline" size={16} color={palette.primary} />
@@ -648,29 +648,29 @@ export default function ProfileSyncView({ navigation }) {
           <View style={styles.navShortcutsGrid}>
             {[
               {
-                route: 'Tela1',
-                title: 'Tela 1 • Inicio',
+                route: 'Tela_Inicial',
+                title: 'Tela_Inicial • Inicio',
                 desc: 'Vitrine Kindle & Momentum Lyceum',
                 icon: 'home-outline',
                 color: '#704214',
               },
               {
-                route: 'Tela2',
-                title: 'Tela 2 • Biblioteca',
+                route: 'Tela_Biblioteca',
+                title: 'Tela_Biblioteca • Biblioteca',
                 desc: 'Pastas, Colecoes e Metadados',
                 icon: 'library-outline',
                 color: '#006400',
               },
               {
-                route: 'Tela3',
-                title: 'Tela 3 • Leitor Digital',
+                route: 'Tela_Leitor',
+                title: 'Tela_Leitor • Leitor Digital',
                 desc: 'Tipografia Serif, Dicionario e Notas',
                 icon: 'book-outline',
                 color: '#800020',
               },
               {
-                route: 'Tela4',
-                title: 'Tela 4 • Loja Kindle',
+                route: 'Tela_Explorar',
+                title: 'Tela_Explorar • Loja Kindle',
                 desc: 'Catalogo Tecnico, Manga e Romance',
                 icon: 'compass-outline',
                 color: '#4682B4',

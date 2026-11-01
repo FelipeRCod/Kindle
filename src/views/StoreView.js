@@ -202,7 +202,7 @@ export default function StoreView({ navigation }) {
                 ]}
                 onPress={() => {
                   setSelectedBookId(featuredBook.id);
-                  navigation.navigate('Tela3', { bookId: featuredBook.id });
+                  navigation.navigate('Tela_Leitor', { bookId: featuredBook.id });
                 }}
               >
                 <Ionicons name="book-outline" size={16} color="#FFFFFF" />
@@ -310,7 +310,7 @@ export default function StoreView({ navigation }) {
                         ]}
                         onPress={() => {
                           setSelectedBookId(book.id);
-                          navigation.navigate('Tela3', { bookId: book.id });
+                          navigation.navigate('Tela_Leitor', { bookId: book.id });
                         }}
                       >
                         <Ionicons
@@ -444,7 +444,7 @@ export default function StoreView({ navigation }) {
                     }
                     setSelectedBookId(detailBook.id);
                     setDetailBook(null);
-                    navigation.navigate('Tela3', { bookId: detailBook.id });
+                    navigation.navigate('Tela_Leitor', { bookId: detailBook.id });
                   }}
                 >
                   <Ionicons name="book-outline" size={16} color="#FFFFFF" />

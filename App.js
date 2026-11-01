@@ -6,11 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { KindleProvider, useKindleController, DESIGN_TOKENS } from './src/controllers/KindleController';
-import Tela1 from './Tela1';
-import Tela2 from './Tela2';
-import Tela3 from './Tela3';
-import Tela4 from './Tela4';
-import Tela5 from './Tela5';
+import Tela_Inicial from './Tela_Inicial';
+import Tela_Biblioteca from './Tela_Biblioteca';
+import Tela_Leitor from './Tela_Leitor';
+import Tela_Explorar from './Tela_Explorar';
+import Tela_Mais from './Tela_Mais';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -21,7 +21,7 @@ function KindleBottomTabs() {
 
   return (
     <Tab.Navigator
-      initialRouteName="Tela1"
+      initialRouteName="Tela_Inicial"
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarActiveTintColor: isDark ? '#DAA520' : '#704214',
@@ -41,19 +41,19 @@ function KindleBottomTabs() {
         },
         tabBarIcon: ({ color, size, focused }) => {
           let iconName = 'book-outline';
-          if (route.name === 'Tela1') {
+          if (route.name === 'Tela_Inicial') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Tela2') {
+          } else if (route.name === 'Tela_Biblioteca') {
             iconName = focused ? 'library' : 'library-outline';
-          } else if (route.name === 'Tela3') {
+          } else if (route.name === 'Tela_Leitor') {
             iconName = focused ? 'book' : 'book-outline';
-          } else if (route.name === 'Tela4') {
+          } else if (route.name === 'Tela_Explorar') {
             iconName = focused ? 'compass' : 'compass-outline';
-          } else if (route.name === 'Tela5') {
+          } else if (route.name === 'Tela_Mais') {
             iconName = focused ? 'menu' : 'menu-outline';
           }
 
-          if (route.name === 'Tela3') {
+          if (route.name === 'Tela_Leitor') {
             return (
               <View
                 style={[
@@ -82,18 +82,18 @@ function KindleBottomTabs() {
       })}
     >
       <Tab.Screen
-        name="Tela1"
-        component={Tela1}
+        name="Tela_Inicial"
+        component={Tela_Inicial}
         options={{ title: 'Inicio' }}
       />
       <Tab.Screen
-        name="Tela2"
-        component={Tela2}
+        name="Tela_Biblioteca"
+        component={Tela_Biblioteca}
         options={{ title: 'Biblioteca' }}
       />
       <Tab.Screen
-        name="Tela3"
-        component={Tela3}
+        name="Tela_Leitor"
+        component={Tela_Leitor}
         options={{
           title: 'Leitor',
           tabBarBadge: selectedBook?.progressPercent
@@ -108,13 +108,13 @@ function KindleBottomTabs() {
         }}
       />
       <Tab.Screen
-        name="Tela4"
-        component={Tela4}
+        name="Tela_Explorar"
+        component={Tela_Explorar}
         options={{ title: 'Explorar' }}
       />
       <Tab.Screen
-        name="Tela5"
-        component={Tela5}
+        name="Tela_Mais"
+        component={Tela_Mais}
         options={{ title: 'Mais' }}
       />
     </Tab.Navigator>

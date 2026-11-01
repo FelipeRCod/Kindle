@@ -205,7 +205,7 @@ export default function ReaderView({ navigation }) {
         <View style={styles.topControlsRow}>
           <TouchableOpacity
             style={styles.topIconBtn}
-            onPress={() => navigation.navigate('Tela2')}
+            onPress={() => navigation.navigate('Tela_Biblioteca')}
           >
             <Ionicons name="arrow-back" size={19} color="#F5EFE6" />
           </TouchableOpacity>

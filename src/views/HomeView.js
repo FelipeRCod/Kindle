@@ -118,7 +118,7 @@ export default function HomeView({ navigation }) {
 
   const handleOpenBookReader = (book) => {
     setSelectedBookId(book.id);
-    navigation.navigate('Tela3', { bookId: book.id });
+    navigation.navigate('Tela_Leitor', { bookId: book.id });
   };
 
   const handleSaveReadingLog = () => {
@@ -164,7 +164,7 @@ export default function HomeView({ navigation }) {
         <View style={styles.searchRow}>
           <TouchableOpacity
             style={styles.headerIconButton}
-            onPress={() => navigation.navigate('Tela5')}
+            onPress={() => navigation.navigate('Tela_Mais')}
             activeOpacity={0.8}
           >
             <Ionicons name="notifications-outline" size={21} color="#FFFFFF" />
@@ -384,7 +384,7 @@ export default function HomeView({ navigation }) {
           </View>
           <TouchableOpacity
             style={styles.sectionLinkBtn}
-            onPress={() => navigation.navigate('Tela2')}
+            onPress={() => navigation.navigate('Tela_Biblioteca')}
           >
             <Text style={[styles.sectionLinkText, { color: palette.blue }]}>
               Ver tudo ({libraryBooks.length})
@@ -479,7 +479,7 @@ export default function HomeView({ navigation }) {
           </View>
           <TouchableOpacity
             style={styles.sectionLinkBtn}
-            onPress={() => navigation.navigate('Tela4')}
+            onPress={() => navigation.navigate('Tela_Explorar')}
           >
             <Text style={[styles.sectionLinkText, { color: palette.blue }]}>
               Explorar loja

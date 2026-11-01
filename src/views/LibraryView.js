@@ -426,7 +426,7 @@ export default function LibraryView({ navigation }) {
                   style={styles.gridCoverButton}
                   onPress={() => {
                     setSelectedBookId(book.id);
-                    navigation.navigate('Tela3', { bookId: book.id });
+                    navigation.navigate('Tela_Leitor', { bookId: book.id });
                   }}
                   activeOpacity={0.88}
                 >
@@ -512,7 +512,7 @@ export default function LibraryView({ navigation }) {
                   style={styles.listMainTouch}
                   onPress={() => {
                     setSelectedBookId(book.id);
-                    navigation.navigate('Tela3', { bookId: book.id });
+                    navigation.navigate('Tela_Leitor', { bookId: book.id });
                   }}
                 >
                   <Image
