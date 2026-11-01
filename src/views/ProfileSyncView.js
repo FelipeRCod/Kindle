@@ -12,6 +12,7 @@ import {
   StatusBar,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 
 const FORMAT_OPTIONS = ['KFX', 'EPUB', 'PDF', 'CBZ', 'AZW3'];
@@ -19,7 +20,9 @@ const GOAL_PRESETS = [20, 40, 60, 80, 100];
 
 export default function ProfileSyncView({ navigation }) {
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isWide = width >= 700;
+  const topSafe = Math.max(insets.top + 10, Platform.OS === 'android' ? 46 : 48);
 
   const {
     books,
@@ -102,7 +105,12 @@ export default function ProfileSyncView({ navigation }) {
         backgroundColor={palette.headerBg}
       />
 
-      <View style={[styles.topHeader, { backgroundColor: palette.headerBg }]}>
+      <View
+        style={[
+          styles.topHeader,
+          { backgroundColor: palette.headerBg, paddingTop: topSafe },
+        ]}
+      >
         <View style={styles.headerRow}>
           <View style={styles.profileBadgeRow}>
             <View style={styles.avatarCircle}>

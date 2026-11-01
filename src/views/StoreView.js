@@ -12,12 +12,15 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 
 export default function StoreView({ navigation }) {
   const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isLandscape = width > height;
   const isTablet = width >= 700;
+  const topSafe = Math.max(insets.top + 10, Platform.OS === 'android' ? 46 : 48);
 
   const {
     books,
@@ -69,7 +72,7 @@ export default function StoreView({ navigation }) {
           styles.header,
           {
             backgroundColor: palette.headerBg,
-            paddingTop: Platform.OS === 'ios' ? 48 : 34,
+            paddingTop: topSafe,
           },
         ]}
       >

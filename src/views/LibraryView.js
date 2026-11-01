@@ -12,12 +12,15 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 
 export default function LibraryView({ navigation }) {
   const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isLandscape = width > height;
   const isTablet = width >= 700;
+  const topSafe = Math.max(insets.top + 10, Platform.OS === 'android' ? 46 : 48);
 
   const {
     books,
@@ -110,7 +113,8 @@ export default function LibraryView({ navigation }) {
   };
 
   const numColumns = isTablet ? 4 : isLandscape ? 3 : 2;
-  const gridCardWidth = `${Math.floor(96 / numColumns)}%`;
+  const availableGridWidth = Math.min(width, 1280) - 28;
+  const gridCardWidth = Math.floor((availableGridWidth - 10 * (numColumns - 1)) / numColumns);
 
   return (
     <View style={[styles.container, { backgroundColor: palette.bg }]}>
@@ -119,14 +123,18 @@ export default function LibraryView({ navigation }) {
           styles.header,
           {
             backgroundColor: palette.headerBg,
-            paddingTop: Platform.OS === 'ios' ? 48 : 34,
+            paddingTop: topSafe,
           },
         ]}
       >
         <View style={styles.headerTopRow}>
-          <View>
-            <Text style={styles.headerKicker}>JADE KINDLE • GERENCIADOR DE BIBLIOTECA</Text>
-            <Text style={styles.headerTitle}>Sua Biblioteca Digital</Text>
+          <View style={{ flex: 1, paddingRight: 8 }}>
+            <Text style={styles.headerKicker} numberOfLines={1}>
+              JADE KINDLE • BIBLIOTECA
+            </Text>
+            <Text style={styles.headerTitle} numberOfLines={1}>
+              Sua Biblioteca Digital
+            </Text>
           </View>
           <View style={styles.headerRightActions}>
             <TouchableOpacity
@@ -959,63 +967,64 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   bodyContent: {
-    padding: 16,
-    paddingBottom: 36,
+    paddingHorizontal: 14,
+    paddingTop: 12,
+    paddingBottom: 28,
   },
   sectionMiniRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 6,
   },
   sectionSmallLabel: {
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: '700',
-    letterSpacing: 0.8,
+    letterSpacing: 0.7,
   },
   addFolderLink: {
-    fontSize: 12.5,
+    fontSize: 12,
     fontWeight: '700',
   },
   foldersCarousel: {
     gap: 8,
-    paddingBottom: 12,
+    paddingBottom: 10,
   },
   folderPill: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 7,
-    paddingHorizontal: 13,
-    paddingVertical: 9,
+    gap: 6,
+    paddingHorizontal: 11,
+    paddingVertical: 7,
     borderRadius: 8,
     borderWidth: 1,
   },
   folderPillText: {
-    fontSize: 12.5,
+    fontSize: 12,
     fontWeight: '600',
   },
   filtersBar: {
-    gap: 8,
-    paddingBottom: 12,
+    gap: 6,
+    paddingBottom: 8,
   },
   filterChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 11,
+    paddingVertical: 5,
     borderRadius: 999,
     borderWidth: 1,
   },
   filterChipText: {
-    fontSize: 12,
+    fontSize: 11.5,
     fontWeight: '600',
   },
   formatChip: {
-    paddingHorizontal: 10,
-    paddingVertical: 6,
+    paddingHorizontal: 9,
+    paddingVertical: 5,
     borderRadius: 6,
     borderWidth: 1,
   },
   formatChipText: {
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: '700',
     fontFamily: DESIGN_TOKENS.fonts.mono,
   },
@@ -1023,40 +1032,40 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 14,
+    marginBottom: 10,
   },
   resultCountText: {
-    fontSize: 12,
+    fontSize: 11.5,
     fontFamily: DESIGN_TOKENS.fonts.mono,
   },
   sortButtonsRow: {
     flexDirection: 'row',
-    gap: 6,
+    gap: 5,
   },
   sortMiniBtn: {
-    paddingHorizontal: 9,
-    paddingVertical: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
     borderRadius: 6,
   },
   sortMiniBtnText: {
-    fontSize: 11.5,
+    fontSize: 11,
     fontWeight: '600',
   },
   gridWrap: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    gap: 12,
+    gap: 10,
   },
   gridBookCard: {
     borderRadius: 8,
     borderWidth: 1,
     overflow: 'hidden',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   gridCoverButton: {
     width: '100%',
-    aspectRatio: 0.72,
+    height: 142,
     backgroundColor: '#221E1A',
   },
   gridCoverImg: {

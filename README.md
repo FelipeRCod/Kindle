@@ -57,4 +57,4 @@ npx expo start
 
 ### Expo Snack (Versão SDK 54)
 
-- **Link Direto (Snack SDK 54 — Jade Kindle MVC):** [https://snack.expo.dev/rlwdXF-voz9N5wJ6BLuys](https://snack.expo.dev/rlwdXF-voz9N5wJ6BLuys)
+- **Link Direto (Snack SDK 54 — Jade Kindle MVC):** [https://snack.expo.dev/wemWe1iw6NByiSWWX0exS](https://snack.expo.dev/wemWe1iw6NByiSWWX0exS)

@@ -13,12 +13,15 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 
 export default function HomeView({ navigation }) {
   const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isLandscape = width > height;
   const isTablet = width >= 700;
+  const topSafe = Math.max(insets.top + 10, Platform.OS === 'android' ? 46 : 48);
 
   const {
     books,
@@ -157,7 +160,7 @@ export default function HomeView({ navigation }) {
           styles.topHeader,
           {
             backgroundColor: palette.headerBg,
-            paddingTop: Platform.OS === 'ios' ? 48 : 34,
+            paddingTop: topSafe,
           },
         ]}
       >
@@ -954,16 +957,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 34,
+    paddingHorizontal: 14,
+    paddingTop: 14,
+    paddingBottom: 28,
   },
   heroCard: {
     borderRadius: 8,
     borderWidth: 1,
-    padding: 18,
-    gap: 18,
-    marginBottom: 24,
+    padding: 14,
+    gap: 14,
+    marginBottom: 20,
     shadowColor: '#12100E',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.08,
@@ -980,44 +983,44 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     gap: 6,
     backgroundColor: 'rgba(218, 165, 32, 0.18)',
-    paddingHorizontal: 10,
+    paddingHorizontal: 9,
     paddingVertical: 4,
     borderRadius: 6,
-    marginBottom: 10,
+    marginBottom: 8,
   },
   editorialBadgeText: {
-    fontSize: 10.5,
+    fontSize: 10,
     fontWeight: '700',
     color: '#704214',
-    letterSpacing: 0.8,
+    letterSpacing: 0.7,
   },
   heroTitle: {
-    fontSize: 22,
+    fontSize: 19,
     fontWeight: '700',
     fontFamily: DESIGN_TOKENS.fonts.serif,
-    lineHeight: 28,
+    lineHeight: 24,
   },
   heroAuthor: {
-    fontSize: 13,
-    marginTop: 4,
+    fontSize: 12.5,
+    marginTop: 3,
     fontFamily: DESIGN_TOKENS.fonts.serif,
   },
   heroSynopsis: {
-    fontSize: 13.5,
-    lineHeight: 20,
-    marginTop: 10,
+    fontSize: 12.5,
+    lineHeight: 18,
+    marginTop: 8,
     fontFamily: DESIGN_TOKENS.fonts.serif,
   },
   heroProgressWrap: {
-    marginTop: 14,
+    marginTop: 10,
   },
   heroProgressRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 6,
+    marginBottom: 5,
   },
   monoMetric: {
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: '700',
     fontFamily: DESIGN_TOKENS.fonts.mono,
   },
@@ -1033,33 +1036,33 @@ const styles = StyleSheet.create({
   heroActionsRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 10,
-    marginTop: 16,
+    gap: 8,
+    marginTop: 12,
   },
   primaryButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingHorizontal: 16,
-    paddingVertical: 11,
-    borderRadius: 8,
-  },
-  primaryButtonText: {
-    color: '#FFFFFF',
-    fontSize: 13.5,
-    fontWeight: '600',
-  },
-  secondaryButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 8,
+  },
+  primaryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  secondaryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+    borderRadius: 8,
     borderWidth: 1.5,
   },
   secondaryButtonText: {
-    fontSize: 13,
+    fontSize: 12.5,
     fontWeight: '600',
   },
   heroRightColumn: {
@@ -1067,8 +1070,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   animatedCoverFrame: {
-    width: 126,
-    height: 182,
+    width: 108,
+    height: 152,
     borderRadius: 8,
     overflow: 'hidden',
     borderWidth: 1,
@@ -1098,7 +1101,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 10,
     marginTop: 4,
   },
   sectionTitleGroup: {
@@ -1108,7 +1111,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   sectionTitle: {
-    fontSize: 17,
+    fontSize: 16,
     fontWeight: '700',
     fontFamily: DESIGN_TOKENS.fonts.serif,
   },
@@ -1118,12 +1121,12 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   sectionLinkText: {
-    fontSize: 13,
+    fontSize: 12.5,
     fontWeight: '600',
   },
   horizontalCarousel: {
-    gap: 12,
-    paddingBottom: 20,
+    gap: 10,
+    paddingBottom: 16,
   },
   bookCardHorizontal: {
     borderRadius: 8,
@@ -1132,7 +1135,7 @@ const styles = StyleSheet.create({
   },
   coverContainer: {
     width: '100%',
-    aspectRatio: 0.72,
+    height: 146,
     backgroundColor: '#221E1A',
   },
   cardCoverImage: {

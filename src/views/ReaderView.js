@@ -12,12 +12,15 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 import { LOCAL_DICTIONARY } from '../models/DesignModel';
 
 export default function ReaderView({ navigation }) {
   const { width, height } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isLandscape = width > height;
+  const topSafe = Math.max(insets.top + 10, Platform.OS === 'android' ? 46 : 48);
 
   const {
     books,
@@ -198,7 +201,7 @@ export default function ReaderView({ navigation }) {
           styles.readerTopBar,
           {
             backgroundColor: '#161310',
-            paddingTop: Platform.OS === 'ios' ? 46 : 32,
+            paddingTop: topSafe,
           },
         ]}
       >
