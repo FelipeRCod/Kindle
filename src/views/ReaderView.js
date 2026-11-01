@@ -45,7 +45,7 @@ export default function ReaderView({ navigation }) {
     {
       title: 'Capitulo I',
       subtitle: 'Abertura Editorial',
-      pages: ['Conteudo interativo carregado no leitor Kindle Lyceum.'],
+      pages: ['Conteudo interativo carregado no leitor Jade Kindle.'],
     },
   ];
   const currentChapter = chapters[chapterIndex] || chapters[0];
@@ -211,7 +211,7 @@ export default function ReaderView({ navigation }) {
           </TouchableOpacity>
 
           <View style={styles.topTitleWrap}>
-            <Text style={styles.topKicker}>LEITOR INTELIGENTE LYCEUM</Text>
+            <Text style={styles.topKicker}>JADE KINDLE • LEITOR INTERATIVO</Text>
             <Text style={styles.topBookTitle} numberOfLines={1}>
               {selectedBook.title}
             </Text>
@@ -666,7 +666,7 @@ export default function ReaderView({ navigation }) {
           <View style={styles.modalCardDark}>
             <View style={styles.modalHeaderRow}>
               <View>
-                <Text style={styles.topKicker}>BUILT-IN DICTIONARY LYCEUM</Text>
+                <Text style={styles.topKicker}>DICIONARIO OFFLINE JADE KINDLE</Text>
                 <Text style={styles.modalTitleLight}>
                   Consulta de Vocabulario Offline
                 </Text>

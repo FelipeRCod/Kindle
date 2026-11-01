@@ -75,7 +75,7 @@ export default function StoreView({ navigation }) {
       >
         <View style={styles.headerTop}>
           <View>
-            <Text style={styles.headerKicker}>VITRINE KINDLE UNLIMITED & LOJA</Text>
+            <Text style={styles.headerKicker}>JADE KINDLE UNLIMITED & LOJA</Text>
             <Text style={styles.headerTitle}>Explorar Catalogo Editorial</Text>
           </View>
           <View style={styles.unlimitedBadge}>

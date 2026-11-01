@@ -109,7 +109,7 @@ export default function ProfileSyncView({ navigation }) {
               <Ionicons name="person" size={22} color="#12100E" />
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.headerEyebrow}>CENTRAL DO LEITOR & ECOSSISTEMA LYCEUM</Text>
+              <Text style={styles.headerEyebrow}>JADE KINDLE • CENTRAL DO LEITOR</Text>
               <Text style={styles.headerTitle}>Mais, Sincronizacao & Perfil</Text>
               <Text style={styles.headerSub}>
                 Felipe Rocha de Oliveira • FATEC DSM • Kindle Cloud & USB
@@ -322,7 +322,7 @@ export default function ProfileSyncView({ navigation }) {
             <View style={styles.panelHeader}>
               <Ionicons name="hardware-chip-outline" size={20} color="#4682B4" />
               <Text style={[styles.panelTitle, { color: palette.text }]}>
-                Dispositivo Kindle & Conversor Lyceum
+                Dispositivo & Conversor Jade Kindle
               </Text>
             </View>
 
@@ -650,7 +650,7 @@ export default function ProfileSyncView({ navigation }) {
               {
                 route: 'Tela_Inicial',
                 title: 'Tela_Inicial • Inicio',
-                desc: 'Vitrine Kindle & Momentum Lyceum',
+                desc: 'Vitrine Jade Kindle & Momentum',
                 icon: 'home-outline',
                 color: '#704214',
               },

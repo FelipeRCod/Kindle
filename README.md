@@ -1,6 +1,6 @@
-# Kindle Editorial Digital (MVC) — Atividade Prática 10 (React Native)
+# Jade Kindle — Editorial Digital (MVC) • Atividade Prática 10
 
-Clone interativo e responsivo do aplicativo **Amazon Kindle** desenvolvido em **React Native (Expo)** seguindo estritamente o padrão arquitetural **MVC (Model-View-Controller)**, o ecossistema **[Lyceum](https://github.com/Higino-Neto/Lyceum.git)** e a especificação estética **`designe.md`** (*Editorial Interativo Digital*).
+Clone interativo e responsivo do aplicativo **Amazon Kindle** batizado como **Jade Kindle**, desenvolvido em **React Native (Expo)** seguindo estritamente o padrão arquitetural **MVC (Model-View-Controller)** e a especificação estética **`designe.md`** (*Editorial Interativo Digital*).
 
 ---
 
@@ -15,10 +15,10 @@ Kindle/
 │   ├── controllers/
 │   │   └── KindleController.js   # Orquestração de estado, regras de negócio e ações MVC
 │   └── views/
-│       ├── HomeView.js           # View da Tela Inicial — Início & Dashboard de Momentum Lyceum
+│       ├── HomeView.js           # View da Tela Inicial — Início & Dashboard Jade Momentum
 │       ├── LibraryView.js        # View da Tela Biblioteca — Pastas, Coleções e Conversor
-│       ├── ReaderView.js         # View da Tela Leitor — Leitor Digital Interativo
-│       ├── StoreView.js          # View da Tela Explorar — Loja / Catálogo Kindle
+│       ├── ReaderView.js         # View da Tela Leitor — Leitor Digital Interativo Jade Kindle
+│       ├── StoreView.js          # View da Tela Explorar — Loja / Catálogo Jade Kindle
 │       └── ProfileSyncView.js    # View da Tela Mais — Sincronização, Temas & Perfil
 ├── Tela_Inicial.js               # Tela Inicial (conectada à HomeView)
 ├── Tela_Biblioteca.js            # Tela da Biblioteca (conectada à LibraryView)
@@ -38,10 +38,10 @@ Kindle/
 2. **Camada Controller (`src/controllers/`):**
    - [`src/controllers/KindleController.js`](./src/controllers/KindleController.js): Centraliza todas as operações entre Models e Views (`toggleFavorite`, `addBookToLibrary`, `removeBookFromLibrary`, `updateBookProgress`, `updateBookMetadata`, `toggleBookmarkOnBook`, `addHighlightToBook`, `createFolder`, `logReadingSession`, `convertBookFormat`, `switchGlobalTheme`).
 3. **Camada View (`src/views/` & Telas na Raiz):**
-   - [`Tela_Inicial.js`](./Tela_Inicial.js) ([`src/views/HomeView.js`](./src/views/HomeView.js)): Vitrine Kindle, capa flutuante animada, carrosséis e painel de consistência Lyceum.
+   - [`Tela_Inicial.js`](./Tela_Inicial.js) ([`src/views/HomeView.js`](./src/views/HomeView.js)): Vitrine Jade Kindle, capa flutuante animada, carrosséis e painel de consistência Jade Momentum.
    - [`Tela_Biblioteca.js`](./Tela_Biblioteca.js) ([`src/views/LibraryView.js`](./src/views/LibraryView.js)): Gestor de coleções por pastas, filtros de formato (`KFX`, `EPUB`, `PDF`, `CBZ`, `AZW3`) e inspetor de metadados.
    - [`Tela_Leitor.js`](./Tela_Leitor.js) ([`src/views/ReaderView.js`](./src/views/ReaderView.js)): Leitor interativo multi-abas com ilustrações históricas, destaque de parágrafos, dicionário offline e ajustes tipográficos (`Aa`).
-   - [`Tela_Explorar.js`](./Tela_Explorar.js) ([`src/views/StoreView.js`](./src/views/StoreView.js)): Loja Kindle em layout *zig-zag* editorial com ficha técnica ISBN.
+   - [`Tela_Explorar.js`](./Tela_Explorar.js) ([`src/views/StoreView.js`](./src/views/StoreView.js)): Loja Jade Kindle em layout *zig-zag* editorial com ficha técnica ISBN.
    - [`Tela_Mais.js`](./Tela_Mais.js) ([`src/views/ProfileSyncView.js`](./src/views/ProfileSyncView.js)): Sincronização *Whispersync / USB*, conversor de formatos e seletor global de temas.
 
 ---
@@ -57,4 +57,4 @@ npx expo start
 
 ### Expo Snack (Versão SDK 54)
 
-- **Link Direto (Snack SDK 54 — Arquitetura MVC):** [https://snack.expo.dev/7CMTJmeGQl4vsAwJcyH4_](https://snack.expo.dev/7CMTJmeGQl4vsAwJcyH4_)
+- **Link Direto (Snack SDK 54 — Jade Kindle MVC):** [https://snack.expo.dev/rlwdXF-voz9N5wJ6BLuys](https://snack.expo.dev/rlwdXF-voz9N5wJ6BLuys)

@@ -1,5 +1,5 @@
 {
-  "name": "kindle-editorial-lyceum",
+  "name": "jade-kindle",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "react-native-web": "~0.21.0"
   },
   "private": true,
-  "description": "Clone do App Kindle da Amazon com padrao Lyceum e design Editorial Interativo Digital (FATEC DSM - Atividade Pratica 10).",
+  "description": "Jade Kindle — Clone do App Kindle da Amazon em arquitetura MVC e design Editorial Interativo Digital (FATEC DSM - Atividade Pratica 10).",
   "license": "MIT",
   "repository": {
     "type": "git",

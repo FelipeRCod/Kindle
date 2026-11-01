@@ -51,7 +51,7 @@ export const INITIAL_BOOKS = [
         subtitle: 'Padroes escalaveis para smartphones e tablets',
         pages: [
           'A responsividade real exige que o layout compreenda o espaco disponivel em tempo real. Atraves do hook useWindowDimensions, grades assimetricas colapsam suavemente em telas compactas e se expandem com elegancia no modo paisagem.',
-          'No padrao inspirado no ecossistema Lyceum, cada livro carrega consigo metadados vivos no Model: progresso percentual, marcadores de pagina, anotacoes pessoais, formato do arquivo (EPUB, PDF, KFX) e vinculo com pastas organizacionais.',
+          'No ecossistema Jade Kindle, cada livro carrega consigo metadados vivos no Model: progresso percentual, marcadores de pagina, anotacoes pessoais, formato do arquivo (EPUB, PDF, KFX) e vinculo com pastas organizacionais.',
         ],
       },
       {

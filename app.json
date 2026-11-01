@@ -1,18 +1,21 @@
 {
   "expo": {
-    "name": "Kindle Editorial Lyceum",
-    "slug": "kindle-editorial-lyceum",
+    "name": "Jade Kindle",
+    "slug": "jade-kindle",
     "version": "1.0.0",
-    "orientation": "default",
-    "userInterfaceStyle": "dark",
     "sdkVersion": "57.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#704214"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
   }
 }

@@ -125,7 +125,7 @@ export default function LibraryView({ navigation }) {
       >
         <View style={styles.headerTopRow}>
           <View>
-            <Text style={styles.headerKicker}>GERENCIADOR LYCEUM & KINDLE</Text>
+            <Text style={styles.headerKicker}>JADE KINDLE • GERENCIADOR DE BIBLIOTECA</Text>
             <Text style={styles.headerTitle}>Sua Biblioteca Digital</Text>
           </View>
           <View style={styles.headerRightActions}>
@@ -774,7 +774,7 @@ export default function LibraryView({ navigation }) {
                 </ScrollView>
 
                 <Text style={[styles.fieldLabel, { color: palette.text }]}>
-                  Converter Formato Local (Pipeline Lyceum)
+                  Converter Formato Local (Pipeline Jade Kindle)
                 </Text>
                 <View style={styles.convertRow}>
                   {['KFX', 'AZW3', 'EPUB', 'PDF'].map((targetFmt) => (

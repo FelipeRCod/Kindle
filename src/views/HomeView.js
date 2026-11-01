@@ -174,7 +174,7 @@ export default function HomeView({ navigation }) {
             <Ionicons name="search-outline" size={18} color="#704214" />
             <TextInput
               style={styles.searchInput}
-              placeholder="Pesquisar no Kindle e Lyceum..."
+              placeholder="Pesquisar no Jade Kindle..."
               placeholderTextColor="#8B7355"
               value={searchQuery}
               onChangeText={setSearchQuery}
@@ -270,7 +270,7 @@ export default function HomeView({ navigation }) {
             <View style={styles.editorialBadge}>
               <Ionicons name="sparkles-outline" size={13} color="#704214" />
               <Text style={styles.editorialBadgeText}>
-                LEITURA IMERSIVA • DESTAQUE DA ESTANTE
+                JADE KINDLE • DESTAQUE DA ESTANTE
               </Text>
             </View>
 
@@ -556,14 +556,14 @@ export default function HomeView({ navigation }) {
 
         <View
           style={[
-            styles.lyceumMomentumCard,
+            styles.jadeMomentumCard,
             { backgroundColor: palette.card, borderColor: palette.border },
           ]}
         >
           <View style={styles.momentumTopHeader}>
             <View>
               <Text style={[styles.kickerLabel, { color: palette.neutral }]}>
-                PADRAO LYCEUM • RITMO & CONSISTENCIA
+                JADE KINDLE • RITMO & CONSISTENCIA
               </Text>
               <Text style={[styles.momentumHeadline, { color: palette.text }]}>
                 Painel de Habito Editorial
@@ -770,7 +770,7 @@ export default function HomeView({ navigation }) {
             <View style={styles.modalHeader}>
               <View>
                 <Text style={[styles.kickerLabel, { color: palette.primary }]}>
-                  DIARIO DE LEITURA LYCEUM
+                  DIARIO DE LEITURA JADE KINDLE
                 </Text>
                 <Text style={[styles.modalTitle, { color: palette.text }]}>
                   Registrar Sessao de Leitura
@@ -1228,7 +1228,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
   },
-  lyceumMomentumCard: {
+  jadeMomentumCard: {
     borderRadius: 8,
     borderWidth: 1,
     padding: 16,
