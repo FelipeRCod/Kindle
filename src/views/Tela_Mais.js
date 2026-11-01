@@ -18,7 +18,7 @@ import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleControl
 const FORMAT_OPTIONS = ['KFX', 'EPUB', 'PDF', 'CBZ', 'AZW3'];
 const GOAL_PRESETS = [20, 40, 60, 80, 100];
 
-export default function ProfileSyncView({ navigation }) {
+export default function Tela_Mais({ navigation }) {
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const isWide = width >= 700;

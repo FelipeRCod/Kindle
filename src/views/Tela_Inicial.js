@@ -16,7 +16,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 
-export default function HomeView({ navigation }) {
+export default function Tela_Inicial({ navigation }) {
   const { width, height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const isLandscape = width > height;

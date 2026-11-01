@@ -6,11 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { KindleProvider, useKindleController, DESIGN_TOKENS } from './src/controllers/KindleController';
-import Tela_Inicial from './Tela_Inicial';
-import Tela_Biblioteca from './Tela_Biblioteca';
-import Tela_Leitor from './Tela_Leitor';
-import Tela_Explorar from './Tela_Explorar';
-import Tela_Mais from './Tela_Mais';
+import Tela_Inicial from './src/views/Tela_Inicial';
+import Tela_Biblioteca from './src/views/Tela_Biblioteca';
+import Tela_Leitor from './src/views/Tela_Leitor';
+import Tela_Explorar from './src/views/Tela_Explorar';
+import Tela_Mais from './src/views/Tela_Mais';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();

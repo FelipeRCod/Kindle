@@ -16,7 +16,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKindleController, DESIGN_TOKENS } from '../controllers/KindleController';
 import { LOCAL_DICTIONARY } from '../models/DesignModel';
 
-export default function ReaderView({ navigation }) {
+export default function Tela_Leitor({ navigation }) {
   const { width, height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const isLandscape = width > height;
